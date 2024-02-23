@@ -3,7 +3,11 @@
 @section('content')
 
     <a href="{{ route('create') }}" class="btn btn-primary mb-3">Crear Nuevo Chollo</a>
-
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="row">
         @foreach($chollosList as $chollo)
             <div class="col-md-4 mb-4">

@@ -26,12 +26,25 @@ class CholloController extends Controller
         $c->validate([
             'titulo' => 'required',
             'descripcion' => 'required',
-            'url' => 'required',
+            'url' => 'required|url',
             'categoria' => 'required',
-            'puntuacion' => 'required',
-            'precio' => 'required',
-            'precio_descuento' => 'required',
+            'puntuacion' => 'required|numeric',
+            'precio' => 'required|numeric',
+            'precio_descuento' => 'required|numeric',
             'disponible' => 'required',
+        ], [
+            'titulo.required' => 'El campo título es obligatorio.',
+            'descripcion.required' => 'El campo descripción es obligatorio.',
+            'url.required' => 'El campo URL es obligatorio.',
+            'url.url' => 'El campo URL debe ser una URL válida.',
+            'categoria.required' => 'El campo categoría es obligatorio.',
+            'puntuacion.required' => 'El campo puntuación es obligatorio.',
+            'puntuacion.numeric' => 'El campo puntuación debe ser un valor numérico.',
+            'precio.required' => 'El campo precio es obligatorio.',
+            'precio.numeric' => 'El campo precio debe ser un valor numérico.',
+            'precio_descuento.required' => 'El campo precio con descuento es obligatorio.',
+            'precio_descuento.numeric' => 'El campo precio con descuento debe ser un valor numérico.',
+            'disponible.required' => 'El campo disponible es obligatorio.',
         ]);
 
         $chollo = new Chollo();
@@ -55,12 +68,25 @@ class CholloController extends Controller
         $c->validate([
             'titulo' => 'required',
             'descripcion' => 'required',
-            'url' => 'required',
+            'url' => 'required|url',
             'categoria' => 'required',
-            'puntuacion' => 'required',
-            'precio' => 'required',
-            'precio_descuento' => 'required',
+            'puntuacion' => 'required|numeric',
+            'precio' => 'required|numeric',
+            'precio_descuento' => 'required|numeric',
             'disponible' => 'required',
+        ], [
+            'titulo.required' => 'El campo título es obligatorio.',
+            'descripcion.required' => 'El campo descripción es obligatorio.',
+            'url.required' => 'El campo URL es obligatorio.',
+            'url.url' => 'El campo URL debe ser una URL válida.',
+            'categoria.required' => 'El campo categoría es obligatorio.',
+            'puntuacion.required' => 'El campo puntuación es obligatorio.',
+            'puntuacion.numeric' => 'El campo puntuación debe ser un valor numérico.',
+            'precio.required' => 'El campo precio es obligatorio.',
+            'precio.numeric' => 'El campo precio debe ser un valor numérico.',
+            'precio_descuento.required' => 'El campo precio con descuento es obligatorio.',
+            'precio_descuento.numeric' => 'El campo precio con descuento debe ser un valor numérico.',
+            'disponible.required' => 'El campo disponible es obligatorio.',
         ]);
 
         $chollo = Chollo::find($id);
