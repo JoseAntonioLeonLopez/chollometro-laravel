@@ -7,7 +7,11 @@
         </div>
         <div class="row" >
             <div class="col-md-6">
-                <img class="card-img-top img-thumbnail img-fluid" src="img/{{$chollo->id}}-chollo-ofertas.png" alt="{{ $chollo->titulo }}">
+                @if ($chollo->disponible)
+                    <img class="card-img-top img-thumbnail img-fluid" src="img/{{$chollo->id}}-chollo-ofertas.png" alt="{{ $chollo->titulo }}">
+                @else
+                    <img class="card-img-top img-thumbnail img-fluid" src="img/{{$chollo->id}}-chollo-ofertas.png" alt="{{ $chollo->titulo }}" style="filter: blur(4px);">
+                @endif
             </div>
             <div class="col-md-6" >
                 <div class="card-body" >
