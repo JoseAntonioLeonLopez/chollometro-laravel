@@ -57,14 +57,11 @@
 </head>
 <body>
     <header class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-2 text-center">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-4 text-left">
                 <img src="img/logo.png" alt="Logo de Chollo Ofertas">
             </div>
-            <div class="col-md-8 text-center">
-                <h1>Chollo Ofertas</h1>
-            </div>
-            <div class="col-md-2 text-center">
+            <div class="col-md-4 text-center">
                 <nav>
                     <ul>
                         <li><a href="/">Inicio</a></li>
@@ -73,6 +70,7 @@
                     </ul>
                 </nav>
             </div>
+            <div class="col-md-4"></div>
         </div>
     </header>
 
