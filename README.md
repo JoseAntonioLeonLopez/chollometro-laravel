@@ -7,6 +7,62 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Cómo arrancar el proyecto
+
+Para poner en marcha el proyecto, sigue estos pasos:
+
+1. **Clonar el repositorio**: Utiliza el comando `git clone` para copiar el proyecto a tu máquina local:
+
+    ```bash
+    git clone https://github.com/JoseAntonioLeonLopez/chollometro-laravel.git
+    ```
+
+2. **Instalar dependencias**: Accede a la carpeta del proyecto y ejecuta el comando `composer install` para instalar las dependencias de PHP:
+
+    ```bash
+    cd nombre_de_la_carpeta_del_proyecto
+    composer install
+    ```
+
+3. **Configurar el archivo .env**: Si experimentas un error 500, es probable que necesites configurar el archivo de entorno `.env` con los parámetros adecuados. Aquí tienes un ejemplo de configuración:
+
+    ```plaintext
+    APP_NAME=Laravel
+    APP_ENV=local
+    APP_KEY=base64:w0p5dqELzORm0V9n/XchRqVApxtj9Oe3CeJY6RBTSaU=
+    APP_DEBUG=true
+    APP_URL=http://localhost
+    
+    # Configuración de la base de datos
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nombre_de_la_base_de_datos
+    DB_USERNAME=root
+    DB_PASSWORD=
+    
+    # Otras configuraciones (correo, caché, etc.)
+    
+    ```
+
+4. **Limpiar la caché y la configuración**: Para asegurarte de que no haya problemas de caché o configuración, ejecuta los siguientes comandos:
+
+    ```bash
+    php artisan cache:clear
+    php artisan config:clear
+    php artisan route:clear
+    ```
+
+5. **Ejecutar la aplicación**: Finalmente, inicia el servidor de desarrollo con el comando `php artisan serve`:
+
+    ```bash
+    php artisan serve
+    ```
+
+Con estos pasos, deberías poder iniciar y ejecutar el proyecto sin problemas. Si encuentras algún problema, revisa los logs de Laravel para obtener más información sobre posibles errores.
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
