@@ -20,7 +20,7 @@
                     <div class="card-body" style="background-color: #D6DBDF">
                         <h5 class="card-title">{{ $chollo->titulo }}</h5>
                         <p class="card-subtitle mb-2 text-muted">{{ $chollo->categoria }}</p>
-                        <p>{{ $chollo->precio_descuento }} €</p>
+                        <p><del class="text-muted">{{ $chollo->precio }}€</del> {{ $chollo->precio_descuento }}€</p>
                         <a href="{{ route('show', $chollo->id) }}" class="btn btn-primary">Ver más</a>
                         <a href="{{ route('edit', $chollo->id) }}" class="btn btn-secondary">Editar</a>
                         <form action="{{ route('destroy', $chollo->id) }}" method="POST" class="d-inline">
